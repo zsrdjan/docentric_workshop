@@ -18,7 +18,7 @@ Basic Docentric knowledge is required before joining.
 
 ---
 
-## What You Get?
+## Workshop program
 
 ### 1. Discovery Call (1 hour)
 **We start by understanding your needs:**
@@ -71,5 +71,12 @@ Basic Docentric knowledge is required before joining.
 - Up to 3 participants from your company
 
 ---
+**Ready to lift off?** Contact us to schedule your discovery call and get started!  
 
-**Ready to lift off?** Contact us to schedule your discovery call and get started!
+[Apply for the Lift Off Workshop](https://example.com/apply)
+
+Prefer a different contact option or do you have any questions?  
+
+- 📧 Email us at support@docentric.com
+- 📞 Call us at +1 234 567 890  
+- 📅 Book a time directly on our calendar
