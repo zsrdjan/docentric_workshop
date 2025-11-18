@@ -1,4 +1,4 @@
-# Lift Off Workshop for Customers
+﻿# Lift Off Workshop for Partners
 
 ## Personalized Workshops to Help Your Team Succeed with Docentric AX implementation
 
@@ -6,14 +6,14 @@
 
 ## Why This Workshop?
 
-Prepare your team to work with Docentric AX in real projects. 
+Prepare your team to work with Docentric AX in real projects.
 The **Lift Off Workshop** is a focused workshop designed for small teams that want:
 
 - Faster onboarding
 - Practical, hands-on guidance
 - One ready-to-use Docentric report
 
-**Prerequisites:** This training builds on the Docentric Learning Path. 
+**Prerequisites:** This training builds on the Docentric Learning Path.
 Basic Docentric knowledge is required before joining.
 
 ---
@@ -71,12 +71,12 @@ Basic Docentric knowledge is required before joining.
 - Up to 3 participants from your company
 
 ---
-**Ready to lift off?** Contact us to schedule your discovery call and get started!  
+**Ready to lift off?** Contact us to schedule your discovery call and get started!
 
 [Apply for the Lift Off Workshop](https://example.com/apply)
 
-Prefer a different contact option or do you have any questions?  
+Prefer a different contact option or do you have any questions?
 
 - 📧 Email us at support@docentric.com
-- 📞 Call us at +1 234 567 890  
+- 📞 Call us at +1 234 567 890
 - 📅 Book a time directly on our calendar
