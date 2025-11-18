@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Off Workshop for Partners - Docentric</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #2B3A67;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #2B3A67;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #FF7F50 0%, #F57C47 100%);
+            transform: rotate(45deg);
+            opacity: 0.15;
+        }
+
+        .logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 22px;
+            color: #FFFFFF;
+            font-weight: 400;
+            max-width: 800px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: #2B3A67;
+            padding: 40px;
+        }
+
+        /* Content Cards */
+        .card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: #2B3A67;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #2B3A67;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .card p, .card li {
+            color: #2B3A67;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF7F50;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* Orange Section Headers */
+        .orange-header {
+            background: transparent;
+            padding: 0;
+            margin: 40px 0 30px 0;
+        }
+
+        .orange-header h2 {
+            color: #FF7F50;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Workshop Steps */
+        .steps-container {
+            margin: 40px 0;
+        }
+
+        .step {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF7F50 0%, #F57C47 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 15px rgba(255, 127, 80, 0.3);
+        }
+
+        .step-content {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-content h3 {
+            color: #2B3A67;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .step-content .step-subtitle {
+            color: #FF7F50;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .step-content p, .step-content li {
+            color: #2B3A67;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .step-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .step-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .step-content ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2B3A67;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* Real-World Example Card */
+        .example-card {
+            background: #F8F9FA;
+            border-left: 4px solid #FF7F50;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .example-card h3 {
+            color: #2B3A67;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .example-card h4 {
+            color: #FF7F50;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* Pricing Section */
+        .pricing-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .pricing-card h2 {
+            color: #2B3A67;
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 72px;
+            font-weight: 800;
+            color: #FF7F50;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+
+        .price-includes {
+            color: #FF7F50;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .pricing-details {
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pricing-details p, .pricing-details li {
+            color: #2B3A67;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .pricing-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pricing-details ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .pricing-details ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FF7F50;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .pricing-note {
+            background: #F8F9FA;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border-left: 4px solid #FF7F50;
+        }
+
+        .pricing-note p {
+            color: #2B3A67;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-item h3 {
+            color: #2B3A67;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: #2B3A67;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonial {
+            background: #F8F9FA;
+            border-left: 4px solid #FF7F50;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .testimonial p {
+            color: #2B3A67;
+            font-size: 17px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .author {
+            color: #FF7F50;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #FF7F50 0%, #F57C47 100%);
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            color: #FFFFFF;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section .rocket {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+        }
+
+        .cta-option {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px 30px;
+            border-radius: 12px;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-option:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #FF7F50;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 38px;
+            }
+
+            .header .subtitle {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .card h2 {
+                font-size: 26px;
+            }
+
+            .price {
+                font-size: 56px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+
+            .cta-options {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .card, .step-content, .pricing-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+
+            .cta-section {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="doCentric_logotip/doCentric_logotip_white.png" alt="Docentric Logo" class="logo">
+            <h1>Lift Off Workshop</h1>
+            <p class="subtitle">Help Your Customers Succeed with Docentric AX Implementation</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Why Offer This Workshop -->
+            <div class="orange-header">
+                <h2>Why Offer This Workshop?</h2>
+            </div>
+            <div class="card">
+                <p>When your customers invest in Docentric, they want to see results quickly. The Lift Off Workshop gives you a structured way to get their teams productive in three weeks instead of three months of figuring it out themselves.</p>
+
+                <p>The workshop helps you:</p>
+
+                <ul>
+                    <li>Get customers up and running faster with hands-on guidance</li>
+                    <li>Reduce the number of "how do I..." support requests later</li>
+                    <li>Build stronger relationships by working together on real projects</li>
+                    <li>Offer something valuable that sets you apart</li>
+                </ul>
+
+                <p style="margin-top: 20px;"><strong>What you need:</strong> Basic Docentric knowledge through the Partner Learning Path. We'll provide the workshop framework, materials, and support to help you deliver it successfully.</p>
+            </div>
+
+            <!-- How the Workshop Works -->
+            <div class="orange-header">
+                <h2>How the Workshop Works</h2>
+            </div>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Discovery Call</h3>
+                        <p class="step-subtitle">Getting to know your customer's needs (1 hour)</p>
+                        <ul>
+                            <li>Learn about their team's goals and current reporting setup</li>
+                            <li>Pick one SSRS report to work with during the workshop</li>
+                            <li>Discuss any specific requirements (languages, branding, special formatting)</li>
+                            <li>Plan the workshop schedule</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Online Workshop Sessions</h3>
+                        <p class="step-subtitle">4 sessions × 3 hours each</p>
+                        <p><strong>Meeting twice per week, you'll cover:</strong></p>
+                        <ul>
+                            <li>Docentric Designer fundamentals and Word template creation</li>
+                            <li>Setting up and configuring Docentric in Dynamics 365 Finance & Operations</li>
+                            <li>Programming patterns and how to extend Docentric functionality</li>
+                            <li>Hands-on work building their actual report together</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>Team size:</strong> Up to 3 people from your company (we find this works well for teams who'll be collaborating)</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Support Between Sessions</h3>
+                        <p class="step-subtitle">Helping them stay on track (4 hours total)</p>
+                        <ul>
+                            <li>Four 1-hour support blocks spread across the program</li>
+                            <li>Answer questions that come up between sessions</li>
+                            <li>Help them keep making progress on their own</li>
+                            <li>Troubleshoot any issues they run into</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Wrap-Up Call</h3>
+                        <p class="step-subtitle">Wrapping things up (1 hour)</p>
+                        <ul>
+                            <li>Review everything accomplished together</li>
+                            <li>Answer final questions</li>
+                            <li>Talk through next steps for their ongoing work</li>
+                            <li>Share tips for maintaining and extending templates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Certificate of Completion</h3>
+                        <p class="step-subtitle">Recognition for their work</p>
+                        <p>Each participant gets a certificate or badge showing they've completed the program</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real-World Example -->
+            <div class="card">
+                <h2>Real-World Example</h2>
+                <p>Here's how a typical workshop might go:</p>
+
+                <div class="example-card">
+                    <h3>Scenario: A manufacturing customer needs to replace their SSRS purchase order report with Docentric.</h3>
+
+                    <h4>Week-by-week:</h4>
+                    <ul>
+                        <li><strong>Discovery call:</strong> You learn they need multi-language support and custom branding</li>
+                        <li><strong>Week 1-2:</strong> Team learns Designer basics while you build the PO template foundation together</li>
+                        <li><strong>Week 3:</strong> Add their custom requirements and D365 integration</li>
+                        <li><strong>Week 4:</strong> Handle their unique business rules, final refinements</li>
+                    </ul>
+
+                    <p style="margin-top: 20px;"><strong>Result:</strong> Customer has a working PO report they can deploy, plus the knowledge to maintain and extend it themselves.</p>
+
+                    <p style="margin-top: 15px;">Instead of a potentially drawn-out project with lots of back-and-forth, you have a clear 3-week path to success.</p>
+                </div>
+            </div>
+
+            <!-- What's In It for You -->
+            <div class="card">
+                <h2>What's In It for You</h2>
+
+                <h3 style="color: #FF7F50; margin-top: 30px;">As a partner, the workshop helps you:</h3>
+                <ul>
+                    <li><strong>Faster implementations</strong> - A structured approach means less time spent on each customer project</li>
+                    <li><strong>Fewer support requests</strong> - Customers who understand Docentric need less ongoing help</li>
+                    <li><strong>Billable service</strong> - The workshop itself is a revenue opportunity, plus customers often need additional customization work afterward</li>
+                    <li><strong>Happier customers</strong> - Hands-on training builds their confidence and strengthens your relationship</li>
+                    <li><strong>Something to offer</strong> - Not all partners provide structured enablement like this</li>
+                    <li><strong>Easier handoffs</strong> - The documentation process makes it simple to wrap up and move on</li>
+                </ul>
+
+                <h3 style="color: #FF7F50; margin-top: 30px;">What your customers get:</h3>
+                <ul>
+                    <li>A completed Docentric template for their selected report, ready to use</li>
+                    <li>Documentation showing how it was built</li>
+                    <li>A team that's confident working with Docentric on real projects</li>
+                    <li>Knowledge to build additional reports on their own</li>
+                    <li>Certificate of completion for each participant</li>
+                </ul>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing-card">
+                <h2>Pricing and Investment</h2>
+                <div class="price">€3,400</div>
+                <div class="price-includes">per customer workshop</div>
+
+                <div class="pricing-details">
+                    <p style="text-align: center; margin-bottom: 25px;"><strong>What the customer receives:</strong></p>
+                    <ul>
+                        <li>12 hours of live instruction (4 sessions × 3 hours each)</li>
+                        <li>4 hours of support time between sessions (four 1-hour blocks)</li>
+                        <li>Discovery call at the start and wrap-up call at the end</li>
+                        <li>One production-ready template built together with expert guidance</li>
+                        <li>Documentation of the build process</li>
+                        <li>Certificates for all participants</li>
+                        <li>Room for up to 3 people from their company</li>
+                    </ul>
+
+                    <div class="pricing-note">
+                        <p><strong>Note:</strong> This is the customer-facing price. Get in touch with us to discuss partner pricing, margins, and volume opportunities if you'll be running multiple workshops.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="card">
+                <h2>Common Questions</h2>
+
+                <div class="faq-item">
+                    <h3>Do we need Docentric experience to deliver the workshop?</h3>
+                    <p>You should have basic Docentric knowledge through the Partner Learning Path. We'll provide the workshop materials, structure, and support for your first delivery.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What materials do you provide?</h3>
+                    <p>We supply the workshop framework, presentation templates, exercise guides, and support during your first delivery. After that, you'll be set to run workshops independently.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can we customize the workshop for specific industries or use cases?</h3>
+                    <p>Absolutely. The framework is flexible - you can adapt it to your customer's industry and specific needs.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if we run into questions during delivery?</h3>
+                    <p>We're here to help, especially during your first few workshops. Reach out anytime and we'll get you answers quickly.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do customers learn about the workshop?</h3>
+                    <p>We provide a customer-facing flyer you can share, and you can position it as part of your implementation or support services.</p>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="card">
+                <h2>What Our Partners Say</h2>
+
+                <div class="testimonial">
+                    <p>"We've delivered three Lift Off Workshops in the past quarter and the results have been great. Our customers are more engaged, support tickets have dropped, and we've gotten follow-on work from every workshop. The structured approach makes it straightforward even for our less experienced consultants."</p>
+                    <p class="author">— Michael Anderson, Practice Lead, D365 Solutions Group</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"The Lift Off Workshop changed how we onboard customers to Docentric. Instead of lengthy email chains and scattered calls, we have a clear 3-week plan. Customers like the hands-on approach, and we appreciate the predictable timeline."</p>
+                    <p class="author">— Lisa Zhang, Senior Consultant, Enterprise Dynamics Partners</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"What impressed me most was the support from Docentric during our first workshop. They provided templates, answered our questions quickly, and helped us adapt the content for our customer's industry. Now we're comfortable delivering these on our own and our customers love them."</p>
+                    <p class="author">— Robert Kowalski, Technical Director, Nordic ERP Solutions</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="rocket">🚀</div>
+            <h2>Get Started</h2>
+            <p><strong>Ready to offer Lift Off Workshops to your customers?</strong></p>
+
+            <a href="https://example.com/customer-flyer" class="cta-button">Download the Customer-Facing Flyer</a>
+            <a href="mailto:partners@docentric.com" class="cta-button">Contact Partner Enablement</a>
+
+            <p style="margin-top: 40px; font-size: 18px;"><strong>Questions about the program?</strong></p>
+
+            <div class="cta-options">
+                <a href="mailto:partners@docentric.com" class="cta-option">📧 Email partners@docentric.com</a>
+                <a href="tel:+38647774180" class="cta-option">📞 Call +386 47 774 180 (EU)</a>
+                <a href="tel:+16508357260" class="cta-option">📞 Call +1 650 835 7260 (US)</a>
+                <a href="https://example.com/partner-booking" class="cta-option">📅 Schedule a partner consultation</a>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 14px; opacity: 0.9;">
+                <em>Delivered by Docentric partners | Supported by Microsoft Gold Partner Docentric</em>
+            </p>
+        </section>
+    </div>
+</body>
+</html>

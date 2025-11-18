@@ -110,7 +110,7 @@ Ready to lift off? Contact us to schedule your discovery call and get started!
 [Apply for the Workshop](link)
 
 Other contact options:
-- 📧 Email us at support@docentric.com
+- 📧 Email us at sales@docentric.com
 - 📞 Call us at +1 234 567 890
 - 📅 Book a time directly on our calendar
 ```
